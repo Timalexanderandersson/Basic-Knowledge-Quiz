@@ -30,6 +30,9 @@ def game_playing_text():
     player_name()
        
 def player_name():
+    """
+    This function let the user fill in a input for a name to play the game. 
+    """
     name_user_here = ''
     
     while name_user_here == '':
@@ -40,6 +43,11 @@ def player_name():
             name_user_here = ''
 
     print(f'Hey there {name_user_here} lets get started with the game!')
+
+def display_questions():
+    print('hello')
+    
+display_questions()
 
 game_playing_text()
 
