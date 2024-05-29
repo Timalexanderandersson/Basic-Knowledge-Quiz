@@ -44,14 +44,8 @@ def player_name():
     display_questions()
 
 def display_questions():
-
-    first_column = questions.col_values(1)
-
-    for question in first_column:
-        print(question)
-  
-
-    print('display all questions')
+    
+   
 
 display_questions()
 
