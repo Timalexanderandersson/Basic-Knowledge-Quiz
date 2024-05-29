@@ -49,7 +49,9 @@ def display_questions():
     answer_col = questions.col_values(2)
 
     for question, answer_here in zip(question_col, answer_col):
-        print(question, answer_here)
+        print(question)
+        user_answers = input('Answer Here: ')
+        
    
 
 
