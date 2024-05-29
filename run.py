@@ -40,25 +40,27 @@ def player_name():
             name_user_here = input('Enter in your name to start the game:').strip().lower()
             
 
-    print(f'Hey there {name_user_here} lets get started with the game!')
+    print(f'Hey there {name_user_here} lets get started with the game!\n')
     display_questions()
 
-def display_questions():  
+def display_questions():
+    """
+
+    """
     
     question_col = questions.col_values(1)
     answer_col = questions.col_values(2)
     
-
     for question, answer_here in zip(question_col, answer_col):
         while True:
-            print(question)
+            print(question,"\n")
             user_answers = input('Answer Here: ').strip().lower()
-            
-            
+            if user_answers == answer_here.strip().lower():
+                print("You got it Right")
+            else:
+                print("Sorry, its wrong try again!")
 
-            
-                
+
 display_questions()
-
 #game_playing_text()
 
