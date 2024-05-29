@@ -63,9 +63,20 @@ def display_questions(name_user_here):
                 break
             else:
                 print(f"Sorry {name_user_here} , its wrong try again!")
+                score_number -= 1
+                
+    quiz_over()
 
 def quiz_over():
-    print("hey")
-
+    """
+    Function keep the result of the quiz and prints the ending text.
+    """
+    global score_number 
+    print('\n*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#')
+    print('                          Game over!')
+    print("           Your score result is:",score_number,"out of 5 questions!")
+    print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#')
+        
+      
 game_playing_text()
 
