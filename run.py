@@ -57,6 +57,7 @@ def display_questions():
             user_answers = input('Answer Here: ').strip().lower()
             if user_answers == answer_here.strip().lower():
                 print("You got it Right")
+                break
             else:
                 print("Sorry, its wrong try again!")
 
