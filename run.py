@@ -17,7 +17,7 @@ questions = SHEET_HERE.worksheet('questions')
 
 data = questions.get_all_values()
 
-#print(data)
+score_number = 0
 
 def game_playing_text():
     """ 
