@@ -15,8 +15,6 @@ SHEET_HERE = GOOGLESPREAD.open("basic_questions")
 
 questions = SHEET_HERE.worksheet('questions')
 
-data = questions.get_all_values()
-
 score_number = 0
 
 def game_playing_text():
@@ -46,11 +44,16 @@ def player_name():
     display_questions()
 
 def display_questions():
+
+    first_column = questions.col_values(1)
+
+    for question in first_column:
+        print(question)
+  
+
     print('display all questions')
 
-    
-    
 display_questions()
 
-game_playing_text()
+#game_playing_text()
 
