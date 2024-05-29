@@ -41,9 +41,9 @@ def player_name():
             
 
     print(f'Hey there {name_user_here} lets get started with the game!\n')
-    display_questions()
+    display_questions(name_user_here)
 
-def display_questions():
+def display_questions(name_user_here):
     """
 
     """
@@ -58,12 +58,11 @@ def display_questions():
             user_answers = input('Answer Here: ').strip().lower()
             if user_answers == answer_here.strip().lower():
                 score_number += 1
-                print("You got it Right")
+                print(f"You got it Right {name_user_here}!")
                 break
             else:
-                print("Sorry, its wrong try again!")
+                print(f"Sorry {name_user_here} , its wrong try again!")
 
 
-display_questions()
-#game_playing_text()
+game_playing_text()
 
