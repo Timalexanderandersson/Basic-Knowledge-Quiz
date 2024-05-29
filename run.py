@@ -47,6 +47,7 @@ def display_questions():
     """
 
     """
+    global score_number
     
     question_col = questions.col_values(1)
     answer_col = questions.col_values(2)
@@ -56,6 +57,7 @@ def display_questions():
             print(question,"\n")
             user_answers = input('Answer Here: ').strip().lower()
             if user_answers == answer_here.strip().lower():
+                score_number += 1
                 print("You got it Right")
                 break
             else:
