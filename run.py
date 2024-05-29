@@ -47,17 +47,14 @@ def display_questions():
     
     question_col = questions.col_values(1)
     answer_col = questions.col_values(2)
+    
 
     for question, answer_here in zip(question_col, answer_col):
-        print(question)
-        user_answers = input('Answer Here: ')
-        
-   
-
-
-
-   
-
+        while True:
+            print(question)
+            user_answers = input('Answer Here: ').strip().lower()
+            
+                
 display_questions()
 
 #game_playing_text()
