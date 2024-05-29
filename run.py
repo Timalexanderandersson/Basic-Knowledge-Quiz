@@ -40,12 +40,15 @@ def player_name():
         if name_user_here.isnumeric():
             print('You have to enter a name')
             name_user_here = input('Enter in your name to start the game:').strip().lower()
-            name_user_here = ''
+            
 
     print(f'Hey there {name_user_here} lets get started with the game!')
+    display_questions()
 
 def display_questions():
-    print('hello')
+    print('display all questions')
+
+    
     
 display_questions()
 
