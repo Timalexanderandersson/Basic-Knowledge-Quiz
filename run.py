@@ -45,7 +45,8 @@ def player_name():
 
 def display_questions(name_user_here):
     """
-
+    this function loops and shows the questions and respond to the answers 
+    that the player are choosing.
     """
     global score_number
     
@@ -63,6 +64,8 @@ def display_questions(name_user_here):
             else:
                 print(f"Sorry {name_user_here} , its wrong try again!")
 
+def quiz_over():
+    print("hey")
 
 game_playing_text()
 
