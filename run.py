@@ -16,7 +16,7 @@ SHEET_HERE = GOOGLESPREAD.open("basic_questions")
 questions = SHEET_HERE.worksheet('questions')
 
 score_number = 0
-
+ 
 def game_playing_text():
     """ 
     This function contains the intro text to the quiz game.
@@ -43,8 +43,10 @@ def player_name():
     print(f'Hey there {name_user_here} lets get started with the game!')
     display_questions()
 
-def display_questions():
-    
+def display_questions():   
+
+    question_col = questions.col_values(1)
+    answer_col = questions.col_values(2)
    
 
 display_questions()
