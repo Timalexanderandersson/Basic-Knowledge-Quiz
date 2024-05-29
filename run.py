@@ -43,10 +43,13 @@ def player_name():
     print(f'Hey there {name_user_here} lets get started with the game!')
     display_questions()
 
-def display_questions():   
-
+def display_questions():  
+    
     question_col = questions.col_values(1)
     answer_col = questions.col_values(2)
+
+    for question in question_col:
+        print(question)
    
 
 display_questions()
