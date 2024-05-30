@@ -34,10 +34,10 @@ def player_name():
     name_user_here = ''
     
     while name_user_here == '':
-        name_user_here = input('Enter in your name to start the game:').strip().lower()
+        name_user_here = input('Enter in your name to start the game:').strip()
         if name_user_here.isnumeric():
             print('You have to enter a name')
-            name_user_here = input('Enter in your name to start the game:').strip().lower()
+            name_user_here = input('Enter in your name to start the game:').strip()
             
 
     print(f'Hey there {name_user_here} lets get started with the game!\n')
