@@ -16,7 +16,6 @@ SHEET_HERE = GOOGLESPREAD.open("basic_questions")
 questions = SHEET_HERE.worksheet('questions')
 
 score_number = 0
-
  
 def game_playing_text():
     """ 
@@ -63,20 +62,20 @@ def display_questions(name_user_here):
                 print(f"You got it Right {name_user_here}!")
                 break
             else:
-                print(f"Sorry {name_user_here} , its wrong try again!")
+                print(f"Sorry {name_user_here} , its wrong, lets try the next question!")
                 break
             
-    quiz_over()
+    quiz_over(name_user_here)
 
 
-def quiz_over():
+def quiz_over(name_user_here):
     """
     Function keep the result of the quiz and prints the ending text.
     """
     global score_number 
     print('\n*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#')
     print('                          Game over!')
-    print("           Your score result is:",score_number,"out of 10 questions!")
+    print(f"          {name_user_here} Your score result is:",score_number,"out of 10 questions!")
     print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#')
         
       
