@@ -83,6 +83,6 @@ def quiz_over(name_user_here):
 def upload_score():
     print(score_sheet.get_all_values)   
         
-upload_score()      
-#game_playing_text()
+      
+game_playing_text()
 
