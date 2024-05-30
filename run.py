@@ -17,14 +17,6 @@ questions = SHEET_HERE.worksheet('questions')
 
 score_number = 0
 
-def no_negativ_score():
-    """
-    Keeping the Score at 0, so it never gets negative.
-    """
-    global score_number
-    if score_number < 0:
-        score_number = 0
-
  
 def game_playing_text():
     """ 
@@ -72,8 +64,7 @@ def display_questions(name_user_here):
                 break
             else:
                 print(f"Sorry {name_user_here} , its wrong try again!")
-                score_number -= 1
-                no_negativ_score()
+                break
             
     quiz_over()
 
