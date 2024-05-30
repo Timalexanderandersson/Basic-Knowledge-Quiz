@@ -74,7 +74,7 @@ def quiz_over():
     global score_number 
     print('\n*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#')
     print('                          Game over!')
-    print("           Your score result is:",score_number,"out of 5 questions!")
+    print("           Your score result is:",score_number,"out of 10 questions!")
     print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#')
         
       
