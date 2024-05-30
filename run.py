@@ -1,3 +1,4 @@
+""" Inport google tooling """
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -16,16 +17,19 @@ SHEET_HERE = GOOGLESPREAD.open("basic_questions")
 questions = SHEET_HERE.worksheet('questions')
 score_sheet = SHEET_HERE.worksheet('Score')
 
+
 score_number = 0
  
+
 def game_playing_text():
     """ 
     This function contains the intro text to the quiz game.
     """
     print('######################################################################')
-    print(f'           Hello and welcome to the Basic Knowledge Quiz!\n\nHere we gonna test some of your knowledge about some basic questions\n\n                 You think you may know the answers?\n\n                        Lets find out then!')
+    print('Hello and welcome to the Basic Knowledge Quiz!')
+    print('Lets test some of your knowledge about some basic questions')
+    print('You think you may know the answers? Lets find out then!')
     print('######################################################################')
-    input('                        Press Enter To Play!')
     player_name()
        
 def player_name():
@@ -75,9 +79,9 @@ def quiz_over(name_user_here):
     Function keep the result of the quiz and prints the ending text.
     """
     global score_number 
-    print('\n*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#')
-    print('                          Game over!')
-    print(f"          {name_user_here} Your score result is:",score_number,"out of 10 questions!")
+    print('\n*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#')
+    print('Game over!')
+    print(f"{name_user_here} Your score result is:",score_number,"out of 10 questions!")
     print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#')
 
 def upload_score():
