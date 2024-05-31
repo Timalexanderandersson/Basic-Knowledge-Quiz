@@ -52,7 +52,7 @@ def player_name():
 
 def display_questions(name_user_here):
     """
-    this function loops and shows the questions and respond to the answers 
+    This function loops and shows the questions and respond to the answers 
     that the player are choosing.
     """
     global score_number
@@ -62,14 +62,16 @@ def display_questions(name_user_here):
     
     for question, answer_here in zip(question_col, answer_col):
         while True:
-            print(question,"\n")
+            print(question)
             user_answers = input('Answer Here: ').strip().lower()
             if user_answers == answer_here.strip().lower():
                 score_number += 1
                 print(f"You got it Right {name_user_here}!")
+                print('-------------------------------------')
                 break
             else:
-                print(f"Sorry {name_user_here} , its wrong, lets try the next question!")
+                print(f"Sorry {name_user_here}, wrong... next question! ")
+                print('-------------------------------------')
                 break
             
     quiz_over(name_user_here)
@@ -80,10 +82,11 @@ def quiz_over(name_user_here):
     Function keep the result of the quiz and prints the ending text.
     """
     global score_number 
-    print('\n*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#')
+    print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#')
     print('Game over!')
-    print(f"{name_user_here} Your score result is:",score_number,"out of 10 questions!")
-    print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#')
+    print(f"{name_user_here} Your score: {score_number} out of 10 questions!")
+    print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#')
+
 
 def upload_score():
     print(score_sheet.get_all_values)   
