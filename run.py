@@ -89,8 +89,13 @@ def quiz_over(name_user_here):
 
 
 def upload_score():
+    """
+    This function uploads the score to the google sheets.
+    """
     print(score_sheet.get_all_values)   
         
-      
-game_playing_text()
+
+if __name__ == "__main__":
+    game_playing_text()    
+
 
