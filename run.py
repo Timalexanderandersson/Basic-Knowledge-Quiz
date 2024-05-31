@@ -1,4 +1,4 @@
-""" Inport google tooling """
+""" Import Google tooling """
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -25,13 +25,14 @@ def game_playing_text():
     """ 
     This function contains the intro text to the quiz game.
     """
-    print('######################################################################')
+    print('###############################################################')
     print('Hello and welcome to the Basic Knowledge Quiz!')
     print('Lets test some of your knowledge about some basic questions')
     print('You think you may know the answers? Lets find out then!')
-    print('######################################################################')
+    print('###############################################################')
     player_name()
        
+
 def player_name():
     """
     This function let the user fill in a input for a name to play the game. 
@@ -40,13 +41,14 @@ def player_name():
     
     while name_user_here == '':
         name_user_here = input('Enter in your name to start the game:').strip()
-        if name_user_here.isnumeric():
-            print('You have to enter a name')
-            name_user_here = input('Enter in your name to start the game:').strip()
+        if name_user_here.isnumeric() or name_user_here == '':
+            print('You have to enter a name (not numbers or blank spaces)')
+            name_user_here = ''
             
 
     print(f'Hey there {name_user_here} lets get started with the game!\n')
     display_questions(name_user_here)
+
 
 def display_questions(name_user_here):
     """
@@ -72,7 +74,6 @@ def display_questions(name_user_here):
             
     quiz_over(name_user_here)
     
-
 
 def quiz_over(name_user_here):
     """
