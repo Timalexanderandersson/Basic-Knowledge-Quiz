@@ -45,7 +45,6 @@ def player_name():
             print('You have to enter a name (not numbers or blank spaces)')
             name_user_here = ''
 
-
     print(f'Hey there {name_user_here} lets get started with the game!\n')
     display_questions(name_user_here)
 
@@ -97,5 +96,3 @@ def upload_score():
 
 if __name__ == "__main__":
     game_playing_text()
-
-
