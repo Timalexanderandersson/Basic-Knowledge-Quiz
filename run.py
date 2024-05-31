@@ -19,10 +19,10 @@ score_sheet = SHEET_HERE.worksheet('Score')
 
 
 score_number = 0
- 
+
 
 def game_playing_text():
-    """ 
+    """
     This function contains the intro text to the quiz game.
     """
     print('###############################################################')
@@ -31,20 +31,20 @@ def game_playing_text():
     print('You think you may know the answers? Lets find out then!')
     print('###############################################################')
     player_name()
-       
+
 
 def player_name():
     """
-    This function let the user fill in a input for a name to play the game. 
+    This function let the user fill in a input for a name to play the game.
     """
     name_user_here = ''
-    
+
     while name_user_here == '':
         name_user_here = input('Enter in your name to start the game:').strip()
         if name_user_here.isnumeric() or name_user_here == '':
             print('You have to enter a name (not numbers or blank spaces)')
             name_user_here = ''
-            
+
 
     print(f'Hey there {name_user_here} lets get started with the game!\n')
     display_questions(name_user_here)
@@ -52,14 +52,14 @@ def player_name():
 
 def display_questions(name_user_here):
     """
-    This function loops and shows the questions and respond to the answers 
+    This function loops and shows the questions and respond to the answers
     that the player are choosing.
     """
     global score_number
-    
-    question_col = questions.col_values(1)
-    answer_col = questions.col_values(2)
-    
+
+    question_col = questions.col_values(1)[1:]
+    answer_col = questions.col_values(2)[1:]
+
     for question, answer_here in zip(question_col, answer_col):
         while True:
             print(question)
@@ -70,18 +70,18 @@ def display_questions(name_user_here):
                 print('-------------------------------------')
                 break
             else:
-                print(f"Sorry {name_user_here}, wrong... next question! ")
+                print(f"Sorry {name_user_here}, wrong... next question!")
                 print('-------------------------------------')
                 break
-            
+
     quiz_over(name_user_here)
-    
+
 
 def quiz_over(name_user_here):
     """
     Function keep the result of the quiz and prints the ending text.
     """
-    global score_number 
+    global score_number
     print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#')
     print('Game over!')
     print(f"{name_user_here} Your score: {score_number} out of 10 questions!")
@@ -92,10 +92,10 @@ def upload_score():
     """
     This function uploads the score to the google sheets.
     """
-    print(score_sheet.get_all_values)   
-        
+    print(score_sheet.get_all_values)
+
 
 if __name__ == "__main__":
-    game_playing_text()    
+    game_playing_text()
 
 
