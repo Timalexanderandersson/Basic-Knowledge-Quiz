@@ -9,7 +9,7 @@ SCOPE = [
     "https://www.googleapis.com/auth/drive.file"
 ]
 
-CREDENT = Credentials.from_service_account_file('quizcreds.json')
+CREDENT = Credentials.from_service_account_file('creds.json')
 CREDS_SCOPE = CREDENT.with_scopes(SCOPE)
 GOOGLESPREAD = gspread.authorize(CREDS_SCOPE)
 SHEET_HERE = GOOGLESPREAD.open("basic_questions")
