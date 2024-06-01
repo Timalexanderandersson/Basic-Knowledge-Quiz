@@ -72,7 +72,6 @@ def display_questions(name_user_here):
                 print('-------------------------------')
                 break
 
-
     quiz_over(name_user_here)
 
 
@@ -109,9 +108,8 @@ def start_game_again(game_playing_text):
         print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*##*#*#*#')
         print('Thanks for playing the Basic Knowledge Quiz!')
         print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*##*#*#*#')
-
     score_number = 0
-    
-    
+
+
 if __name__ == "__main__":
     game_playing_text()
