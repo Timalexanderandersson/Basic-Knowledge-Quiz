@@ -97,7 +97,12 @@ def upload_score(name_user_here):
 
 
 def start_game_again(game_playing_text):
-    
+    """
+    This function starts the game again when pressed any key.
+    """
+    global score_number
+    input('You want to play again? press any key!\n')
+    score_number = 0
     game_playing_text()
         
     
