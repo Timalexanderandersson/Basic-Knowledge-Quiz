@@ -93,7 +93,13 @@ def upload_score(name_user_here):
     """
     global score_number
     score_sheet.append_row([score_number, name_user_here])
-    
+    start_game_again(game_playing_text)
 
+
+def start_game_again(game_playing_text):
+    
+    game_playing_text()
+        
+    
 if __name__ == "__main__":
     game_playing_text()
