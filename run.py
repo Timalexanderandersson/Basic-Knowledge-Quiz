@@ -84,15 +84,15 @@ def quiz_over(name_user_here):
     print('Game over!')
     print(f"{name_user_here} Your score: {score_number} out of 10 questions!")
     print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*')
-    upload_score()
+    upload_score(name_user_here)
 
 
-def upload_score():
+def upload_score(name_user_here):
     """
     This function uploads the score to the google sheets.
     """
     global score_number
-    score_sheet.append_row([score_number])
+    score_sheet.append_row([score_number, name_user_here])
     
 
 if __name__ == "__main__":
