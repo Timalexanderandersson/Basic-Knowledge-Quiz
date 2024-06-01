@@ -25,11 +25,11 @@ def game_playing_text():
     """
     This function contains the intro text to the quiz game.
     """
-    print('###############################################################')
+    print('###########################################################')
     print('Hello and welcome to the Basic Knowledge Quiz!')
     print('Lets test some of your knowledge about some basic questions')
     print('You think you may know the answers? Lets find out then!')
-    print('###############################################################')
+    print('###########################################################')
     player_name()
 
 
@@ -81,10 +81,10 @@ def quiz_over(name_user_here):
     Function keep the result of the quiz and prints the ending text.
     """
     global score_number
-    print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#')
+    print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*')
     print('Game over!')
     print(f"{name_user_here} Your score: {score_number} out of 10 questions!")
-    print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#')
+    print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*')
 
 
 def upload_score():
