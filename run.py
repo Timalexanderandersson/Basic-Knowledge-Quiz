@@ -15,8 +15,7 @@ GOOGLESPREAD = gspread.authorize(CREDS_SCOPE)
 SHEET_HERE = GOOGLESPREAD.open("basic_questions")
 
 questions = SHEET_HERE.worksheet('questions')
-score_sheet = SHEET_HERE.worksheet('Score')
-
+score_sheet = SHEET_HERE.worksheet('score')
 
 score_number = 0
 
@@ -85,14 +84,16 @@ def quiz_over(name_user_here):
     print('Game over!')
     print(f"{name_user_here} Your score: {score_number} out of 10 questions!")
     print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*#*#*#**#*#*')
+    upload_score()
 
 
 def upload_score():
     """
     This function uploads the score to the google sheets.
     """
-    print(score_sheet.get_all_values)
-
+    global score_number
+    score_sheet.append_row([score_number])
+    
 
 if __name__ == "__main__":
     game_playing_text()
