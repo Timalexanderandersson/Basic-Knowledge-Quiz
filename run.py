@@ -65,12 +65,13 @@ def display_questions(name_user_here):
             if user_answers == answer_here.strip().lower():
                 score_number += 1
                 print(f"You got it Right {name_user_here}!")
-                print('-------------------------------------')
+                print('-------------------------------')
                 break
             else:
                 print(f"Sorry {name_user_here}, wrong... next question!")
-                print('-------------------------------------')
+                print('-------------------------------')
                 break
+
 
     quiz_over(name_user_here)
 
@@ -101,10 +102,16 @@ def start_game_again(game_playing_text):
     This function starts the game again when pressed any key.
     """
     global score_number
-    input('You want to play again? press any key!\n')
+    here_input = input('Play again? press y. End the game press n\n')
+    if here_input == "y":
+        game_playing_text()
+    elif here_input == "n":
+        print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*##*#*#*#')
+        print('Thanks for playing the Basic Knowledge Quiz!')
+        print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*##*#*#*#')
+
     score_number = 0
-    game_playing_text()
-        
+    
     
 if __name__ == "__main__":
     game_playing_text()
