@@ -89,6 +89,8 @@ from the https://ui.dev/amiresponsive
 
 - The game have been tested in the https://pep8ci.herokuapp.com/# and did not find any problem.
 
+![alt text](assets/noproblem.PNG)
+
 - Tested for different inputs for user name. no blank spaces or numbers can be used.
 
 - The game is working in my terminal on gitpod and it works on the heroku terminal aswell.
@@ -106,6 +108,8 @@ from the https://ui.dev/amiresponsive
 ### Python validator test
 
 - tested code in the https://www.pythonchecker.com/ validator and no errors found.
+
+![alt text](assets/images/validator.PNG)
 
 ## Deployment
 
