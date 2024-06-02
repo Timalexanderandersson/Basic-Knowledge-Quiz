@@ -71,6 +71,7 @@ def display_questions(name_user_here):
                 print('You need to fill in an answer!')
             else:
                 print(f"Sorry {name_user_here}, wrong... next question!")
+                print(f'Answer is: {answer_here}')
                 print('-------------------------------')
                 break
 
