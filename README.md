@@ -2,9 +2,8 @@
 
 This is a quiz game for people who like to test there general knowledge
 or just for people who want to enjoy playing a game of quiz! The quiz contains different questions about all types of different subjects.
-
 The quiz Basic Knowledge Quiz runs in the python terminal and in the heroku application.
-The quiz collect questions and answers from a Google Sheets named basic_questions. "questions sheet" contains the questions and answers and "score sheet" contains the score results.
+The quiz collect questions and answers from a Google Sheets named basic_questions. The "questions sheet" contains the questions and answers, and the "score sheet" contains the score results.
 
 Here is the link to the [Game](https://basic-knowledge-quiz-aa6b69fbaded.herokuapp.com/)
 
