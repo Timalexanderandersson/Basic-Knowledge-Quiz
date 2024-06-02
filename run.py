@@ -60,11 +60,11 @@ def display_questions(name_user_here):
 
     for question, answer_here in zip(question_col, answer_col):
         # get possible answers and form array.
-        possible_answers = [ans.strip().lower() for ans in answer_here.split(',')]
+        pos_answer = [ans.strip().lower() for ans in answer_here.split(',')]
         while True:
             print(question)
             user_answers = input('Answer Here: ').strip().lower()
-            if user_answers in possible_answers:
+            if user_answers in pos_answer:
                 score_number += 1
                 print(f"You got it Right {name_user_here}!")
                 print('-------------------------------')
@@ -103,23 +103,25 @@ def upload_score(name_user_here):
 
 def start_game_again(game_playing_text):
     """
-    This function starts the game again if pressed "y" and will end game if pressed "n".
+    This function starts the game again if pressed "y"
+    and will end game if pressed "n".
     """
     global score_number
     while True:
-        here_input = input('Play again? press y. End the game press n\n').strip().lower()
-    
-        if here_input == "y":
+        ent = input('Again? press "y" end game press "n"\n').strip().lower()
+
+        if ent == "y":
             score_number = 0
             game_playing_text()
             break
-        elif here_input == "n":
+        elif ent == "n":
             print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*##*#*#*#')
             print('Thanks for playing the Basic Knowledge Quiz!')
             print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*##*#*#*#')
             break
         else:
             print('You forgot to type in y or n!')
+
 
 if __name__ == "__main__":
     game_playing_text()
