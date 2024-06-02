@@ -103,18 +103,23 @@ def upload_score(name_user_here):
 
 def start_game_again(game_playing_text):
     """
-    This function starts the game again when pressed any key.
+    This function starts the game again if pressed "y" and will end game if pressed "n".
     """
     global score_number
-    here_input = input('Play again? press y. End the game press n\n')
-    if here_input == "y":
-        score_number = 0
-        game_playing_text()
-    elif here_input == "n":
-        print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*##*#*#*#')
-        print('Thanks for playing the Basic Knowledge Quiz!')
-        print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*##*#*#*#')
-
+    while True:
+        here_input = input('Play again? press y. End the game press n\n').strip().lower()
+    
+        if here_input == "y":
+            score_number = 0
+            game_playing_text()
+            break
+        elif here_input == "n":
+            print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*##*#*#*#')
+            print('Thanks for playing the Basic Knowledge Quiz!')
+            print('*#*#*#*#*#*#*#*#*#*#**#*#*#*#*#*#*#*##*#*#*#')
+            break
+        else:
+            print('You forgot to type in y or n!')
 
 if __name__ == "__main__":
     game_playing_text()
