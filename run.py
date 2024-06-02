@@ -59,10 +59,12 @@ def display_questions(name_user_here):
     answer_col = questions.col_values(2)[1:]
 
     for question, answer_here in zip(question_col, answer_col):
+        # get possible answers and form array.
+        possible_answers = [ans.strip().lower() for ans in answer_here.split(',')]
         while True:
             print(question)
             user_answers = input('Answer Here: ').strip().lower()
-            if user_answers == answer_here.strip().lower():
+            if user_answers in possible_answers:
                 score_number += 1
                 print(f"You got it Right {name_user_here}!")
                 print('-------------------------------')
