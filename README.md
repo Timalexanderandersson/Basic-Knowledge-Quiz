@@ -36,12 +36,12 @@ from the https://ui.dev/amiresponsive
 * Here the user need to enter in a answer to the question.
 * The answers can't be blank or else it will ask for an answer again.
 
-![alt text](assets/images/enterquestion.PNG)
+![alt text](assets/images/newfroga.PNG)
 
 * If the answer is right the terminal will show the user a text that its the right answer.
 * And it will save one score for the user.
 
-![alt text](assets/images/rightanswer.PNG)
+![alt text](assets/images/bysize.PNG)
 
 * If the answer is wrong the user will get the text that will say its wrong.
 * It will move on to the next question.
@@ -57,7 +57,7 @@ from the https://ui.dev/amiresponsive
 
 * The user will get a chance to play once more or end the quiz game.
 
- ![alt text](assets/images/playagainorno.PNG)
+ ![alt text](assets/images/endgameeee.PNG)
 
  * If the user decide to leave the game and press n the game is over.
 
